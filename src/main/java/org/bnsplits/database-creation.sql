@@ -23,7 +23,7 @@ CREATE TABLE produit (
     prix_vente DECIMAL(10, 2) NOT NULL CHECK (prix_vente > 0),
     stock_actuel INT NOT NULL DEFAULT 0 CHECK (stock_actuel >= 0),
     seuil_alerte INT NOT NULL DEFAULT 5,
-    FOREIGN KEY (categorie_id) REFERENCES categorie(id) ON DELETE RESTRICT
+    FOREIGN KEY (categorie_id) REFERENCES categorie (id) ON DELETE RESTRICT
 );
 
 -- Table: MouvementStock
@@ -34,7 +34,7 @@ CREATE TABLE mouvement_stock (
     quantite INT NOT NULL CHECK (quantite > 0),
     date_mouvement DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     motif VARCHAR(255),
-    FOREIGN KEY (produit_id) REFERENCES produit(id) ON DELETE CASCADE
+    FOREIGN KEY (produit_id) REFERENCES produit (id) ON DELETE CASCADE
 );
 
 -- Table: Commande
@@ -53,6 +53,6 @@ CREATE TABLE ligne_commande (
     quantite INT NOT NULL CHECK (quantite > 0),
     prix_unitaire DECIMAL(10, 2) NOT NULL,
     montant_ligne DECIMAL(10, 2) NOT NULL,
-    FOREIGN KEY (commande_id) REFERENCES commande(id) ON DELETE CASCADE,
-    FOREIGN KEY (produit_id) REFERENCES produit(id) ON DELETE RESTRICT
+    FOREIGN KEY (commande_id) REFERENCES commande (id) ON DELETE CASCADE,
+    FOREIGN KEY (produit_id) REFERENCES produit (id) ON DELETE RESTRICT
 );

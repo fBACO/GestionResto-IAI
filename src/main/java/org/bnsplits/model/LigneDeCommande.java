@@ -12,7 +12,7 @@ public class LigneDeCommande {
 //    public void ligneDeCommande(int id_LigneCmde, int id_cmde, int id_produit, in id) {
 //    }
 
-    public void LineDeCommande (int id_LigneCmde, int id_cmde, int id_produit, int quantite, double prix_unitaire, double montant_ligne)
+    public LigneDeCommande (int id_LigneCmde, int id_cmde, int id_produit, int quantite, double prix_unitaire, double montant_ligne)
     {
     
      this.id_LigneCmde = id_LigneCmde;

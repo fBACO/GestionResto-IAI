@@ -11,9 +11,9 @@ public class Produit {
     private int Stock_actu;
     private int seuil_alerte;
     
-       
     
-    public Produit(int id_produit,int id_categorie, String nom, double prix_vente, int Stock_actu, int seuil_alerte ){
+    
+     public Produit(int id_produit,int id_categorie, String nom, double prix_vente, int Stock_actu, int seuil_alerte ){
     
     this.id_produit = id_produit ;
     this. id_categorie = id_categorie;
@@ -25,6 +25,9 @@ public class Produit {
     
     
     }
+    
+
+   
     
     public int getId_produit (){
         
@@ -59,6 +62,32 @@ public class Produit {
     return seuil_alerte;
     
     }
+    
+     public void setId_produit(int id_produit) {
+        this.id_produit = id_produit;
+    }
+
+    public void setId_categorie(int id_categorie) {
+        this.id_categorie = id_categorie;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setPrix_vente(double prix_vente) {
+        this.prix_vente = prix_vente;
+    }
+
+    public void setStock_actu(int Stock_actu) {
+        this.Stock_actu = Stock_actu;
+    }
+
+    public void setSeuil_alerte(int seuil_alerte) {
+        this.seuil_alerte = seuil_alerte;
+    }
+    
+       
     
 }
 

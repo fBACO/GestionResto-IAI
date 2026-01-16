@@ -50,11 +50,37 @@ public class LigneDeCommande {
         return prix_unitaire;
 
     }
-
+    
     public double getMontant_ligne() {
 
         return montant_ligne;
 
     }
 
+
+    public void setId_LigneCmde(int id_LigneCmde) {
+        this.id_LigneCmde = id_LigneCmde;
+    }
+
+    public void setId_cmde(int id_cmde) {
+        this.id_cmde = id_cmde;
+    }
+
+    public void setId_produit(int id_produit) {
+        this.id_produit = id_produit;
+    }
+
+    public void setQuantite(int quantite) {
+        this.quantite = quantite;
+    }
+
+    public void setPrix_unitaire(double prix_unitaire) {
+        this.prix_unitaire = prix_unitaire;
+    }
+
+    public void setMontant_ligne(double montant_ligne) {
+        this.montant_ligne = montant_ligne;
+    }
+
+    
 }

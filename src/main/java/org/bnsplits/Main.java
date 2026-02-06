@@ -1,23 +1,20 @@
 package org.bnsplits;
 
-import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.FlatLightLaf;
 import org.bnsplits.util.DatabaseConnection;
 
 import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
+import org.bnsplits.view.*;
 
 public class Main {
-    public static void main(String[] args) throws SQLException {
+  public static void main(String[] args) throws SQLException {
 
-        // Appliquer le thème sombre de FlatLaf
-        FlatDarkLaf.setup();
-        System.out.println("Hello World");
+    // Appliquer le thème clair de FlatLaf
+    FlatLightLaf.setup();
 
-        JFrame frame = new JFrame("Gestion Restoration");
-
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1280, 720);
-        frame.setVisible(true);
-    }
+    MainFrame mainFrame = new MainFrame();
+    mainFrame.setVisible(true);
+  }
 }

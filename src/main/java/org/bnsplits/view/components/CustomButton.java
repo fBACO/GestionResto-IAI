@@ -14,6 +14,7 @@ public class CustomButton extends JButton {
   private String clickColor = "#1E40AF";
   private int radius = 16;
   private FontAwesomeSolid icon;
+  // private FontAwesomeSolid icon = FontAwesomeSolid;
 
   // Constructeurs
   public CustomButton() {
@@ -91,9 +92,10 @@ public class CustomButton extends JButton {
     applyFlatLafStyle();
   }
 
-  public FontAwesomeSolid getIcon() {
-    return icon;
-  }
+  // INFO: Ça marche pas
+  // public FontAwesomeSolid getIcon() {
+  //   return icon;
+  // }
 
   public void setIcon(FontAwesomeSolid icon) {
     this.icon = icon;

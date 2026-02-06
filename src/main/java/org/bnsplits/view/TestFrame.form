@@ -31,8 +31,11 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="206" max="32767" attributes="0"/>
-              <Component id="customTextField1" min="-2" pref="367" max="-2" attributes="0"/>
+              <EmptySpace pref="257" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="customPasswordField1" max="32767" attributes="0"/>
+                  <Component id="customTextField1" pref="367" max="32767" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
@@ -47,7 +50,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
               <Component id="customButton1" min="-2" pref="48" max="-2" attributes="0"/>
-              <EmptySpace pref="136" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="customPasswordField1" min="-2" pref="64" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="193" max="-2" attributes="0"/>
               <Component id="customTextField1" min="-2" pref="59" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
           </Group>
@@ -63,6 +68,11 @@
     <Component class="org.bnsplits.view.components.CustomTextField" name="customTextField1">
       <Properties>
         <Property name="text" type="java.lang.String" value="customTextField1"/>
+      </Properties>
+    </Component>
+    <Component class="org.bnsplits.view.components.CustomPasswordField" name="customPasswordField1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="customPasswordField1"/>
       </Properties>
     </Component>
   </SubComponents>

@@ -6,6 +6,8 @@ USE restaurant_management;
 CREATE TABLE utilisateur (
     id INT AUTO_INCREMENT PRIMARY KEY,
     login VARCHAR(50) NOT NULL UNIQUE,
+    username VARCHAR(255) NOT NULL,
+    type ENUM('ADMIN', 'GERANT', 'NORMAL') NOT NULL DEFAULT 'NORMAL',
     mot_de_passe VARCHAR(255) NOT NULL
 );
 

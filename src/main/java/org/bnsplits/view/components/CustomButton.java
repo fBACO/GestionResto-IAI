@@ -91,9 +91,9 @@ public class CustomButton extends JButton {
     applyFlatLafStyle();
   }
 
-  public FontAwesomeSolid getIcon() {
+  /*public FontAwesomeSolid getIcon() {
     return icon;
-  }
+  }*/
 
   public void setIcon(FontAwesomeSolid icon) {
     this.icon = icon;

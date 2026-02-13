@@ -1,8 +1,15 @@
 package org.bnsplits.view;
 
+import java.awt.Color;
+
 public class Theme {
 
   public static final String PRIMARY_COLOR = "#5A7388";
+  public static final String PRIMARY_DIM_COLOR = String.format("#%06X",
+      Color.decode(PRIMARY_COLOR).darker().getRGB() & 0xFFFFFF);
+  public static final String PRIMARY_BRIGHT_COLOR = String.format("#%06X",
+      Color.decode(PRIMARY_COLOR).brighter().getRGB() & 0xFFFFFF);
+
   public static final String ON_PRIMARY_COLOR = "#FFFFFF";
 
   public static final String BACKGROUND_COLOR = "#F6F7FB";

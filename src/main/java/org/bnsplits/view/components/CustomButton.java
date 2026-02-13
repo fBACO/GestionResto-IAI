@@ -1,17 +1,16 @@
 package org.bnsplits.view.components;
 
 import com.formdev.flatlaf.FlatClientProperties;
-
 import javax.swing.*;
 import java.awt.*;
+import org.bnsplits.view.Theme;
 import org.kordamp.ikonli.fontawesome6.*;
 import org.kordamp.ikonli.swing.FontIcon;
 
 public class CustomButton extends JButton {
 
-  private String primaryColor = "#2563EB";
-  private String hoverColor = "#1D4ED8";
-  private String clickColor = "#1E40AF";
+  private boolean isTextButton = false;
+  private boolean isSelected = true;
   private int radius = 16;
   private FontAwesomeSolid icon;
 
@@ -26,62 +25,62 @@ public class CustomButton extends JButton {
     initStyle();
   }
 
-  public CustomButton(String text, Icon icon) {
+  public CustomButton(String text, boolean isTextButton) {
     super(text);
+    this.isTextButton = isTextButton;
     initStyle();
   }
 
-  // Fonction d'initialisation du style
+  public CustomButton(boolean isTextButton) {
+    super();
+    this.isTextButton = isTextButton;
+    initStyle();
+  }
+
   private void initStyle() {
-    if (icon != null)
-      setIcon(FontIcon.of(icon, 16, Color.WHITE));
+    if (icon != null) {
+      Color iconColor = isTextButton ? Color.decode(Theme.PRIMARY_COLOR) : Color.WHITE;
+      setIcon(FontIcon.of(icon, 16, iconColor));
+    }
 
     setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+    if (isTextButton) {
+      setContentAreaFilled(false);
+      setBorderPainted(false);
+      setFocusPainted(false);
+      setOpaque(false);
+    }
+
     applyFlatLafStyle();
   }
 
-  // Application du style via FlatLaf
   private void applyFlatLafStyle() {
-    putClientProperty(FlatClientProperties.STYLE,
-        "font: bold 14;" +
-            "foreground: #FFFFFF;" +
-            "background: " + primaryColor + ";" +
-            "arc: " + radius + ";" +
-            "borderWidth: 0;" +
-            "focusWidth: 0;" +
-            "hoverBackground: " + hoverColor + ";" +
-            "pressedBackground: " + clickColor + ";" +
-            "disabledBackground: #888888");
+    if (isTextButton) {
+      String foregroundColor = isSelected ? Theme.PRIMARY_COLOR : Theme.ON_BACKGROUND_COLOR;
+      putClientProperty(FlatClientProperties.STYLE,
+          "font: bold 14;" +
+              "foreground: " + foregroundColor + ";" +
+              "margin: 8,12,8,12;" +
+              "iconTextGap: 8");
+    } else {
+      putClientProperty(FlatClientProperties.STYLE,
+          "font: bold 14;" +
+              "foreground: " + Theme.ON_PRIMARY_COLOR + ";" +
+              "background: " + Theme.PRIMARY_BRIGHT_COLOR + ";" +
+              "arc: " + radius + ";" +
+              "borderWidth: 0;" +
+              "focusWidth: 0;" +
+              "iconTextGap: 8;" +
+              "margin: 16,20,16,20;" +
+              "hoverBackground: " + Theme.PRIMARY_COLOR + ";" +
+              "pressedBackground: " + Theme.PRIMARY_DIM_COLOR + ";" +
+              "focusedBackground: " + Theme.PRIMARY_BRIGHT_COLOR + ";" +
+              "disabledBackground: #888888");
+    }
   }
 
   // Getters + Setters
-  public String getPrimaryColor() {
-    return primaryColor;
-  }
-
-  public void setPrimaryColor(String primaryColor) {
-    this.primaryColor = primaryColor;
-    applyFlatLafStyle();
-  }
-
-  public String getHoverColor() {
-    return hoverColor;
-  }
-
-  public void setHoverColor(String hoverColor) {
-    this.hoverColor = hoverColor;
-    applyFlatLafStyle();
-  }
-
-  public String getClickColor() {
-    return clickColor;
-  }
-
-  public void setClickColor(String clickColor) {
-    this.clickColor = clickColor;
-    applyFlatLafStyle();
-  }
-
   public int getRadius() {
     return radius;
   }
@@ -91,10 +90,23 @@ public class CustomButton extends JButton {
     applyFlatLafStyle();
   }
 
-  // INFO: Ça marche pas
-  // public FontAwesomeSolid getIcon() {
-  //   return icon;
-  // }
+  public boolean isTextButton() {
+    return isTextButton;
+  }
+
+  public void setTextButton(boolean textButton) {
+    this.isTextButton = textButton;
+    initStyle();
+  }
+
+  public boolean isSelected() {
+    return isSelected;
+  }
+
+  public void setSelected(boolean selected) {
+    this.isSelected = selected;
+    applyFlatLafStyle();
+  }
 
   public void setIcon(FontAwesomeSolid icon) {
     this.icon = icon;

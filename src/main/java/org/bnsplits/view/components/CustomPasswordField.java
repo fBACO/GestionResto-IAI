@@ -2,16 +2,19 @@ package org.bnsplits.view.components;
 
 import com.formdev.flatlaf.FlatClientProperties;
 import javax.swing.*;
+
+import org.bnsplits.view.Theme;
+
 import java.awt.*;
 
 public class CustomPasswordField extends JPasswordField {
 
-  private String backgroundColor = "#E5E7EB";
-  private String foregroundColor = "#111827";
-  private String placeholderColor = "#6B7280";
-  private String focusColor = "#2563EB";
-  private String caretColor = "#2563EB";
-  private int radius = 12;
+  private String backgroundColor = Theme.SURFACE_DIM_COLOR;
+  private String foregroundColor = Theme.ON_SURFACE_COLOR;
+  private String placeholderColor = Theme.ON_SURFACE_DIM_COLOR;
+  private String focusColor = Theme.PRIMARY_COLOR;
+  private String caretColor = Theme.PRIMARY_COLOR;
+  private int radius = 16;
   private String placeholderText = "Mot de passe...";
 
   public CustomPasswordField() {

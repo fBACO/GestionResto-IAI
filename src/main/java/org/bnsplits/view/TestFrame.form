@@ -39,10 +39,16 @@
                   </Group>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="customTextField2" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="customPasswordField2" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="customTextField2" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="customPasswordField2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Component id="customComboBox1" min="-2" pref="183" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
@@ -65,6 +71,8 @@
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
                               <Component id="customTextField2" min="-2" pref="55" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="customComboBox1" min="-2" pref="61" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
@@ -141,6 +149,11 @@
       </Layout>
     </Container>
     <Component class="org.bnsplits.view.components.CustomTitle" name="customTitle1">
+    </Component>
+    <Component class="org.bnsplits.view.components.CustomComboBox" name="customComboBox1">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customComboBox1ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

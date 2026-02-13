@@ -5,6 +5,8 @@ import javax.swing.*;
 import java.awt.*;
 import org.bnsplits.view.Theme;
 import org.kordamp.ikonli.Ikon;
+import org.kordamp.ikonli.feather.Feather;
+import org.kordamp.ikonli.fontawesome6.FontAwesomeSolid;
 import org.kordamp.ikonli.swing.FontIcon;
 import org.kordamp.ikonli.materialdesign2.MaterialDesignD;
 import org.kordamp.ikonli.materialdesign2.MaterialDesignF;
@@ -14,7 +16,7 @@ public class CustomTitle extends JPanel {
 
   private JLabel iconLabel;
   private JLabel textLabel;
-  private Ikon icon = MaterialDesignF.FORKLIFT;
+  private Ikon icon = FontAwesomeSolid.RECEIPT;
   private String text = "Gestion Restaurant";
 
   // Constructeurs

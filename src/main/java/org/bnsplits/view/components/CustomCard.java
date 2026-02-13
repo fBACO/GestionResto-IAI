@@ -36,9 +36,15 @@ public class CustomCard extends JPanel {
   }
 
   private void applyFlatLafStyle() {
-    putClientProperty(FlatClientProperties.STYLE,
-        "arc: " + radius + ";" +
-            (haveBorder ? "border: 1,1,1,1," + Theme.OUTLINE_COLOR + ",1,999" : ""));
+    if (haveBorder) {
+      putClientProperty(FlatClientProperties.STYLE,
+          "arc: " + radius + ";" +
+              "border: 1,1,1,1," + Theme.PRIMARY_COLOR + ";" +
+              "borderWidth: 1");
+    } else {
+      putClientProperty(FlatClientProperties.STYLE,
+          "arc: " + radius);
+    }
   }
 
   // Getters

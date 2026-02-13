@@ -65,102 +65,95 @@ public class TestFrame extends javax.swing.JFrame {
   @SuppressWarnings("unchecked")
   // <editor-fold defaultstate="collapsed" desc="Generated
   // <editor-fold defaultstate="collapsed" desc="Generated
-  // Code">//GEN-BEGIN:initComponents
-  private void initComponents() {
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
 
-    customTextField2 = new org.bnsplits.view.components.CustomTextField();
-    customPasswordField2 = new org.bnsplits.view.components.CustomPasswordField();
-    customButton1 = new org.bnsplits.view.components.CustomButton();
-    jScrollPane1 = new javax.swing.JScrollPane();
-    customTable1 = new org.bnsplits.view.components.CustomTable();
-    customCard1 = new org.bnsplits.view.components.CustomCard();
+        customTextField2 = new org.bnsplits.view.components.CustomTextField();
+        customPasswordField2 = new org.bnsplits.view.components.CustomPasswordField();
+        customButton1 = new org.bnsplits.view.components.CustomButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        customTable1 = new org.bnsplits.view.components.CustomTable();
+        customCard1 = new org.bnsplits.view.components.CustomCard();
 
-    setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-    customTextField2.setText("customTextField2");
+        customTextField2.setText("customTextField2");
 
-    customPasswordField2.setText("customPasswordField2");
-    customPasswordField2.addActionListener(this::customPasswordField2ActionPerformed);
+        customPasswordField2.setText("customPasswordField2");
+        customPasswordField2.addActionListener(this::customPasswordField2ActionPerformed);
 
-    customButton1.setText("customButton1");
+        customButton1.setText("customButton1");
 
-    customTable1.setModel(new javax.swing.table.DefaultTableModel(
-        new Object[][] {
-            { null, null, null, null },
-            { null, null, null, null },
-            { null, null, null, null },
-            { null, null, null, null }
-        },
-        new String[] {
-            "Title 1", "Title 2", "Title 3", "Title 4"
-        }));
-    jScrollPane1.setViewportView(customTable1);
+        customTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(customTable1);
 
-    javax.swing.GroupLayout customCard1Layout = new javax.swing.GroupLayout(customCard1);
-    customCard1.setLayout(customCard1Layout);
-    customCard1Layout.setHorizontalGroup(
-        customCard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 72, Short.MAX_VALUE));
-    customCard1Layout.setVerticalGroup(
-        customCard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 222, Short.MAX_VALUE));
+        javax.swing.GroupLayout customCard1Layout = new javax.swing.GroupLayout(customCard1);
+        customCard1.setLayout(customCard1Layout);
+        customCard1Layout.setHorizontalGroup(
+            customCard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 242, Short.MAX_VALUE)
+        );
+        customCard1Layout.setVerticalGroup(
+            customCard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 222, Short.MAX_VALUE)
+        );
 
-    javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-    getContentPane().setLayout(layout);
-    layout.setHorizontalGroup(
-        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(170, 170, 170)
-                        .addComponent(customButton1, javax.swing.GroupLayout.PREFERRED_SIZE,
-                            javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-                            javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(customButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(27, 27, 27)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 673,
-                            javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(customCard1, javax.swing.GroupLayout.DEFAULT_SIZE,
-                            javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 673, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(customCard1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(customTextField2, javax.swing.GroupLayout.Alignment.TRAILING,
-                        javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
-                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(customPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE,
-                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(129, 129, 129)));
-    layout.setVerticalGroup(
-        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(customTextField2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(customPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(129, 129, 129))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(customCard1, javax.swing.GroupLayout.PREFERRED_SIZE,
-                            javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(customCard1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(129, 129, 129))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(159, 159, 159)
-                                .addComponent(customTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 55,
-                                    javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(customTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(31, 31, 31)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                    javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(64, 64, 64)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(customPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 82,
-                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(customButton1, javax.swing.GroupLayout.PREFERRED_SIZE,
-                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(282, Short.MAX_VALUE)));
+                    .addComponent(customPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(customButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(282, Short.MAX_VALUE))
+        );
 
-    pack();
-  }// </editor-fold>//GEN-END:initComponents
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
 
   private void customPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_customPasswordField2ActionPerformed
     // TODO add your handling code here:
@@ -195,12 +188,12 @@ public class TestFrame extends javax.swing.JFrame {
     java.awt.EventQueue.invokeLater(() -> new TestFrame().setVisible(true));
   }
 
-  // Variables declaration - do not modify//GEN-BEGIN:variables
-  private org.bnsplits.view.components.CustomButton customButton1;
-  private org.bnsplits.view.components.CustomCard customCard1;
-  private org.bnsplits.view.components.CustomPasswordField customPasswordField2;
-  private org.bnsplits.view.components.CustomTable customTable1;
-  private org.bnsplits.view.components.CustomTextField customTextField2;
-  private javax.swing.JScrollPane jScrollPane1;
-  // End of variables declaration//GEN-END:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private org.bnsplits.view.components.CustomButton customButton1;
+    private org.bnsplits.view.components.CustomCard customCard1;
+    private org.bnsplits.view.components.CustomPasswordField customPasswordField2;
+    private org.bnsplits.view.components.CustomTable customTable1;
+    private org.bnsplits.view.components.CustomTextField customTextField2;
+    private javax.swing.JScrollPane jScrollPane1;
+    // End of variables declaration//GEN-END:variables
 }

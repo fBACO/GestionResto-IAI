@@ -45,10 +45,14 @@ public class CustomTable extends JTable {
     header.setReorderingAllowed(false);
     header.setResizingAllowed(false);
 
+    DefaultTableCellRenderer headerRenderer = (DefaultTableCellRenderer) header.getDefaultRenderer();
+    headerRenderer.setHorizontalAlignment(SwingConstants.LEFT);
+
     setAutoCreateRowSorter(false);
     setRowSorter(null);
 
-    // General table settings
+    // setPreferredScrollableViewportSize(null);
+
     setShowGrid(false);
     setIntercellSpacing(new Dimension(0, 8));
     setRowHeight(56);

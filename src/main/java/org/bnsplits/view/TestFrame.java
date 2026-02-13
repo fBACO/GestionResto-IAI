@@ -9,8 +9,6 @@ import java.awt.Color;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
-import org.bnsplits.view.components.ButtonRenderer;
-import org.bnsplits.view.components.ButtonEditor;
 
 /**
  *

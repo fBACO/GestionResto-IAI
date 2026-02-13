@@ -50,6 +50,8 @@ public class CustomButton extends JButton {
       setBorderPainted(false);
       setFocusPainted(false);
       setOpaque(false);
+    } else {
+      setForeground(Color.decode(Theme.ON_PRIMARY_COLOR));
     }
 
     applyFlatLafStyle();
@@ -77,6 +79,8 @@ public class CustomButton extends JButton {
               "pressedBackground: " + Theme.PRIMARY_DIM_COLOR + ";" +
               "focusedBackground: " + Theme.PRIMARY_BRIGHT_COLOR + ";" +
               "disabledBackground: #888888");
+
+      setForeground(Color.decode(Theme.ON_PRIMARY_COLOR));
     }
   }
 
@@ -90,20 +94,20 @@ public class CustomButton extends JButton {
     applyFlatLafStyle();
   }
 
-  public boolean isTextButton() {
+  public boolean getIsTextButton() {
     return isTextButton;
   }
 
-  public void setTextButton(boolean textButton) {
+  public void setIsTextButton(boolean textButton) {
     this.isTextButton = textButton;
     initStyle();
   }
 
-  public boolean isSelected() {
+  public boolean getIsSelected() {
     return isSelected;
   }
 
-  public void setSelected(boolean selected) {
+  public void setIsSelected(boolean selected) {
     this.isSelected = selected;
     applyFlatLafStyle();
   }

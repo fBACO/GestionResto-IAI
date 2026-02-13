@@ -38,11 +38,15 @@ public class CustomTable extends JTable {
             "font: bold 12;" +
             "foreground: " + Theme.ON_BACKGROUND_COLOR + ";" +
             "background: " + Theme.SURFACE_COLOR + ";" +
+            "hoverBackground: " + Theme.SURFACE_COLOR + ";" +
             "separatorColor: " + Theme.SURFACE_COLOR + ";" +
             "bottomSeparatorColor: " + Theme.OUTLINE_COLOR);
 
     header.setReorderingAllowed(false);
     header.setResizingAllowed(false);
+
+    setAutoCreateRowSorter(false);
+    setRowSorter(null);
 
     // General table settings
     setShowGrid(false);

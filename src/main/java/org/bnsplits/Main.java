@@ -8,6 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
 import org.bnsplits.view.*;
+import org.bnsplits.view.main.*;
 
 public class Main {
   public static void main(String[] args) throws SQLException {
@@ -16,7 +17,9 @@ public class Main {
     // FlatDarkLaf.setup();
     FlatLightLaf.setup();
 
-    TestFrame testFrame = new TestFrame();
-    testFrame.setVisible(true);
+    MainFrame mainFrame = new MainFrame();
+    mainFrame.setVisible(true);
+//    TestFrame testFrame = new TestFrame();
+//    testFrame.setVisible(true);
   }
 }

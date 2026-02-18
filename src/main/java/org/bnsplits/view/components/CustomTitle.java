@@ -18,6 +18,7 @@ public class CustomTitle extends JPanel {
   private JLabel textLabel;
   private Ikon icon = FontAwesomeSolid.RECEIPT;
   private String text = "Gestion Restaurant";
+  private Color color = Color.decode(Theme.ON_PRIMARY_COLOR);
 
   // Constructeurs
   public CustomTitle() {
@@ -47,7 +48,7 @@ public class CustomTitle extends JPanel {
     // Icon label
     iconLabel = new JLabel();
     if (icon != null) {
-      iconLabel.setIcon(FontIcon.of(icon, 32, Color.decode(Theme.ON_BACKGROUND_COLOR)));
+      iconLabel.setIcon(FontIcon.of(icon, 24, color));
       add(iconLabel);
     }
 
@@ -61,8 +62,8 @@ public class CustomTitle extends JPanel {
     setOpaque(false);
 
     // Style du texte
-    textLabel.setFont(new Font("Segoe UI", Font.BOLD, 28));
-    textLabel.setForeground(Color.decode(Theme.ON_BACKGROUND_COLOR));
+    textLabel.setFont(new Font("Segoe UI", Font.BOLD, 18));
+    textLabel.setForeground(color);
   }
 
   // Getters
@@ -88,7 +89,7 @@ public class CustomTitle extends JPanel {
       if (iconLabel.getParent() == null) {
         add(iconLabel, 0);
       }
-      iconLabel.setIcon(FontIcon.of(icon, 32, Color.decode(Theme.ON_BACKGROUND_COLOR)));
+      iconLabel.setIcon(FontIcon.of(icon, 24, color));
     } else {
       if (iconLabel.getParent() != null) {
         remove(iconLabel);

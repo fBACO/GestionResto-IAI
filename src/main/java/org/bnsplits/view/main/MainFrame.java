@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package org.bnsplits.view.main;
+import org.bnsplits.view.Theme;
+import javax.swing.*;
+import java.awt.Color;
 
 /**
  *
@@ -28,21 +31,146 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        navBar = new javax.swing.JPanel();
+        customTitle1 = new org.bnsplits.view.components.CustomTitle();
+        navigationDashboard = new org.bnsplits.view.components.NavigationButton();
+        navigationButton1 = new org.bnsplits.view.components.NavigationButton();
+        navigationButton2 = new org.bnsplits.view.components.NavigationButton();
+        navigationButton3 = new org.bnsplits.view.components.NavigationButton();
+        navigationButton4 = new org.bnsplits.view.components.NavigationButton();
+        navigationButton5 = new org.bnsplits.view.components.NavigationButton();
+        topBar = new javax.swing.JPanel();
+        mainStack = new javax.swing.JPanel();
+        customCard1 = new org.bnsplits.view.components.CustomCard();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(java.awt.Color.decode(org.bnsplits.view.Theme.PRIMARY_COLOR));
+        setPreferredSize(new java.awt.Dimension(1920, 1080));
+
+        navBar.setBackground(java.awt.Color.decode(org.bnsplits.view.Theme.PRIMARY_COLOR));
+
+        navigationDashboard.setText("Dashboard");
+        navigationDashboard.addActionListener(this::navigationDashboardActionPerformed);
+
+        navigationButton1.setText("Produits");
+        navigationButton1.setIsSelected(false);
+        navigationButton1.addActionListener(this::navigationButton1ActionPerformed);
+
+        navigationButton2.setText("Catégorie");
+        navigationButton2.setIsSelected(false);
+
+        navigationButton3.setText("Commandes");
+        navigationButton3.setIsSelected(false);
+
+        navigationButton4.setText("Stocks");
+        navigationButton4.setIsSelected(false);
+        navigationButton4.addActionListener(this::navigationButton4ActionPerformed);
+
+        navigationButton5.setText("Statistiques");
+        navigationButton5.setIsSelected(false);
+
+        javax.swing.GroupLayout navBarLayout = new javax.swing.GroupLayout(navBar);
+        navBar.setLayout(navBarLayout);
+        navBarLayout.setHorizontalGroup(
+            navBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(navBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(navBarLayout.createSequentialGroup()
+                        .addGroup(navBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(customTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(navigationDashboard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(navigationButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(navigationButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(navigationButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(navigationButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(navigationButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        navBarLayout.setVerticalGroup(
+            navBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navBarLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(customTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
+                .addComponent(navigationDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(navigationButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(navigationButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(navigationButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(navigationButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(navigationButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        topBar.setBackground(java.awt.Color.decode(org.bnsplits.view.Theme.PRIMARY_COLOR));
+
+        javax.swing.GroupLayout topBarLayout = new javax.swing.GroupLayout(topBar);
+        topBar.setLayout(topBarLayout);
+        topBarLayout.setHorizontalGroup(
+            topBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        topBarLayout.setVerticalGroup(
+            topBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 98, Short.MAX_VALUE)
+        );
+
+        mainStack.setBackground(java.awt.Color.decode(org.bnsplits.view.Theme.PRIMARY_COLOR));
+        mainStack.setLayout(new java.awt.CardLayout());
+
+        javax.swing.GroupLayout customCard1Layout = new javax.swing.GroupLayout(customCard1);
+        customCard1.setLayout(customCard1Layout);
+        customCard1Layout.setHorizontalGroup(
+            customCard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1241, Short.MAX_VALUE)
+        );
+        customCard1Layout.setVerticalGroup(
+            customCard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 623, Short.MAX_VALUE)
+        );
+
+        mainStack.add(customCard1, "card2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(navBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(mainStack, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(topBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(navBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(topBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(mainStack, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void navigationDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_navigationDashboardActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_navigationDashboardActionPerformed
+
+    private void navigationButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_navigationButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_navigationButton1ActionPerformed
+
+    private void navigationButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_navigationButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_navigationButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -70,5 +198,17 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private org.bnsplits.view.components.CustomCard customCard1;
+    private org.bnsplits.view.components.CustomTitle customTitle1;
+    private javax.swing.JPanel mainStack;
+    private javax.swing.JPanel navBar;
+    private org.bnsplits.view.components.NavigationButton navigationButton1;
+    private org.bnsplits.view.components.NavigationButton navigationButton2;
+    private org.bnsplits.view.components.NavigationButton navigationButton3;
+    private org.bnsplits.view.components.NavigationButton navigationButton4;
+    private org.bnsplits.view.components.NavigationButton navigationButton5;
+    private org.bnsplits.view.components.NavigationButton navigationDashboard;
+    private javax.swing.JPanel topBar;
     // End of variables declaration//GEN-END:variables
+
 }
